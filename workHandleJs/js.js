@@ -62,7 +62,7 @@ const validTodo = () => {
   inputsForm.forEach((inputItem) => {
     if (inputItem.value == "") {
       const parentElement = inputItem.parentElement;
-      parentElement.style.borderColor = "red";
+      parentElement.style.borderColor = "blue";
       count += 1;
     }
   });
@@ -127,7 +127,6 @@ const handleEdit = (id) => {
     }
   });
 };
-
 const handleDelete = async (id) => {
   try {
     await callAPI(
@@ -141,18 +140,15 @@ const handleDelete = async (id) => {
     console.log(error);
   }
 };
-
 const render = () => {
   let htmlTodos = "";
   let htmlTodosDoing = "";
   let htmlTodosFinished = "";
-
   const countCategoryTodo = {
     todo: 0,
     doing: 0,
     finished: 0,
   };
-
   todos.forEach((todo) => {
     switch (todo.status) {
       case TODO_TYPE: {

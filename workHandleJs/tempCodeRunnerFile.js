@@ -1,11 +1,11 @@
-let array = [1, 2, 3, 4, 5, 6];
-function reverseArray(arr) {
+const numbers = [1, 2, 3, 4, 5, 6];
+function checkEven(arr) {
   let result = [];
-  arr.forEach((str) => {
-    if (str % 2 == 0) {
-      result.push(str);
+  for (let i = 0; i < arr.length; i++) {
+    if (arr[i] % 2 == 0) {
+      result.push(arr[i]);
     }
-  });
-  return result.reverse();
+  }
+  return result;
 }
-console.log(reverseArray(array));
+console.log(checkEven([numbers]));

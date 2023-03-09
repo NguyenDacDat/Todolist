@@ -1,11 +1,12 @@
-let menu = {
-  width: 200,
-  height: 300,
-  title: "My menu",
-};
-
-menu = {
-  width: 400,
-  height: 600,
-  title: "My menu",
-};
+const companies = ["Facebook", "ZALO", "MESSAGE", "Amazon", "Google"];
+function checkCompanies(arr) {
+  let result = [];
+  let arrayLength = arr.length;
+  for (let i = 0; i < arrayLength; i++) {
+    if (arr[i].toLowerCase().indexOf("o") !== -1) {
+      result.push(arr[i]);
+    }
+  }
+  return result;
+}
+console.log(checkCompanies(companies));
